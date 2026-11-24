@@ -908,8 +908,13 @@ const snd = {
 
 function loadHeroVideo() {
   if (heroVid.getAttribute("src")) return;
-  const px = Math.max(screen.width, screen.height) * (devicePixelRatio || 1);
-  const pick = px >= 2800 ? "2160" : px >= 1700 ? "1440" : "1080";
+  // the video covers the hero (object-fit: cover), so on tall/portrait screens it is shown much
+  // larger than the screen width — pick by the width it is actually DISPLAYED at, in device pixels
+  const dpr = devicePixelRatio || 1;
+  const shownW = Math.max(innerWidth, innerHeight * (16 / 9)) * dpr;
+  const pick = shownW > 2700 && !isTouch ? "2160"   // big / high-DPI desktop screens
+    : shownW > 1600 || isTouch ? "1440"               // laptops, and every phone/tablet (avoids upscaling blur)
+    : "1080";
   heroVid.preload = "auto";
   heroVid.src = heroVid.getAttribute("data-src-" + pick);
   heroVid.load();

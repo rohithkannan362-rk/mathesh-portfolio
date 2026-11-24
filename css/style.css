@@ -518,8 +518,8 @@ body { font-family: var(--font-body); letter-spacing: -0.005em; }
 .pl-video__shade {
   position: absolute; inset: 0; pointer-events: none;
   background:
-    linear-gradient(to top, rgba(10,10,10,.92) 0%, rgba(10,10,10,.35) 38%, rgba(10,10,10,0) 60%),
-    radial-gradient(ellipse at 50% 50%, transparent 45%, rgba(0,0,0,.6) 100%);
+    linear-gradient(to top, rgba(8,8,8,.88) 0%, rgba(8,8,8,.3) 30%, rgba(8,8,8,0) 50%),
+    radial-gradient(ellipse at 50% 45%, transparent 55%, rgba(0,0,0,.38) 100%);
 }
 .preloader__inner { justify-content: flex-end; padding-bottom: 11vh; height: 100%; }
 .pl-skip { position: absolute; right: var(--pad); bottom: 28px; z-index: 4; color: #a9a6a0; transition: color .3s; opacity: 0; }
@@ -541,10 +541,10 @@ body { font-family: var(--font-body); letter-spacing: -0.005em; }
 .hero-bg__shade {
   position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 75% 85% at 50% 38%, rgba(5,5,5,0) 40%, rgba(5,5,5,.55) 100%),
-    linear-gradient(to top, rgba(5,5,5,.95) 0%, rgba(5,5,5,.6) 20%, rgba(5,5,5,0) 48%),
-    linear-gradient(to right, rgba(5,5,5,.6) 0%, rgba(5,5,5,0) 42%),
-    linear-gradient(to bottom, rgba(5,5,5,.65) 0%, rgba(5,5,5,0) 16%);
+    radial-gradient(ellipse 80% 90% at 50% 38%, rgba(5,5,5,0) 50%, rgba(5,5,5,.38) 100%),
+    linear-gradient(to top, rgba(5,5,5,.92) 0%, rgba(5,5,5,.5) 18%, rgba(5,5,5,0) 42%),
+    linear-gradient(to right, rgba(5,5,5,.5) 0%, rgba(5,5,5,0) 38%),
+    linear-gradient(to bottom, rgba(5,5,5,.55) 0%, rgba(5,5,5,0) 14%);
 }
 .hero__content { position: relative; z-index: 1; }
 .hero .hero__title {
@@ -563,7 +563,6 @@ body { font-family: var(--font-body); letter-spacing: -0.005em; }
 /* =========================================================
    Hero footage — subtle extra depth
    ========================================================= */
-.hero-bg::after { content: ""; position: absolute; inset: 0; background: rgba(5,5,5,.1); pointer-events: none; }
 
 /* thin metallic hairline under the nav when it floats */
 .nav.is-scrolled { box-shadow: 0 20px 60px -20px rgba(0,0,0,.8), inset 0 1px 0 rgba(255,255,255,.06), inset 0 -1px 0 rgba(var(--gold-rgb), .12); }
