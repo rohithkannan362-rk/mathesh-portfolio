@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Matheshwaran A S — Full Stack Developer</title>
+  <meta name="description" content="Matheshwaran A S — Full Stack Developer building AI-powered, production-ready web apps with React, Node.js, MongoDB and Google Gemini." />
+  <meta property="og:title" content="Matheshwaran A S — Full Stack Developer" />
+  <meta property="og:description" content="Full Stack Developer · React, Node.js, MongoDB, Gemini AI · 5 live projects · 2 internships." />
+  <meta property="og:image" content="assets/mathesh.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Matheshwaran A S — Full Stack Developer" />
+  <meta name="author" content="Matheshwaran A S" />
+  <link rel="preload" as="image" href="assets/video/welcome-poster.jpg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/icons/favicon-64.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/favicon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="importmap">
+    { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+    } }
+  </script>
+  <noscript><style>.preloader { display: none !important; } body.is-loading { overflow: auto !important; } .cursor { display: none; } body, a, button { cursor: auto !important; } .portrait__card { clip-path: none !important; }</style></noscript>
+</head>
+<body class="is-loading">
+  <a class="skip-link" href="#about">Skip to content</a>
+  <script>
+    /* failsafe: if a script or CDN ever fails, never leave visitors stuck on the welcome screen */
+    window.__siteBooted = false;
+    setTimeout(function () {
+      if (window.__siteBooted) return;
+      var p = document.querySelector(".preloader");
+      if (p) p.remove();
+      document.body.classList.remove("is-loading");
+      document.body.classList.add("no-js-fallback");
+    }, 9000);
+  </script>
+
+  <!-- ============ WELCOME / PRELOADER (intro video) ============ -->
+  <div class="preloader">
+    <div class="preloader__panel"></div>
+    <div class="pl-video">
+      <video class="pl-video__media" src="assets/video/welcome-uniform.mp4" poster="assets/video/welcome-poster.jpg" playsinline preload="auto" aria-hidden="true" disablepictureinpicture></video>
+      <div class="pl-video__shade"></div>
+    </div>
+    <div class="preloader__inner">
+      <h2 class="pl-title">
+        <span class="pl-w"><span>Welcome</span></span>
+        <span class="pl-w"><span>to</span></span>
+        <span class="pl-w"><span>my</span></span>
+        <span class="pl-w"><span class="shimmer">portfolio</span></span>
+      </h2>
+      <p class="pl-sub mono"><span>Matheshwaran A S — Full Stack Developer</span></p>
+      <div class="preloader__meta">
+        <span>Loading experience</span>
+        <span class="preloader__count">000</span>
+      </div>
+    </div>
+    <button class="pl-skip mono" type="button">Skip intro →</button>
+  </div>
+
+  <!-- ============ GLOBAL LAYERS ============ -->
+  <canvas id="webgl" aria-hidden="true"></canvas>
+  <div class="spotlight" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor__ring"><span class="cursor__label"></span></div>
+    <div class="cursor__dot"></div>
+  </div>
+  <div class="scroll-progress" aria-hidden="true"><i></i></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <span class="nav__spacer" aria-hidden="true"></span>
+    <nav class="nav__links">
+      <span class="nav__indicator" aria-hidden="true"></span>
+      <a href="#about" data-cursor="hover"><span data-text="About">About</span></a>
+      <a href="#skills" data-cursor="hover"><span data-text="Skills">Skills</span></a>
+      <a href="#work" data-cursor="hover"><span data-text="Projects">Projects</span></a>
+      <a href="#journey" data-cursor="hover"><span data-text="Journey">Journey</span></a>
+      <a href="#contact" data-cursor="hover"><span data-text="Contact">Contact</span></a>
+    </nav>
+    <div class="nav__right">
+      <a href="assets/Matheshwaran-AS-Resume.pdf" target="_blank" rel="noopener" class="nav__cta magnetic" data-cursor="hover">
+        <span class="nav__cta-label"><span data-text="Résumé">Résumé</span></span>
+        <span class="nav__cta-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="14" height="14"><path d="M7 17L17 7M17 7H9M17 7V15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+      <button class="nav__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu" data-cursor="hover"><i></i><i></i></button>
+    </div>
+  </header>
+
+  <div class="menu" id="site-menu" aria-hidden="true" inert>
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Projects</a><a href="#journey">Journey</a><a href="#contact">Contact</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <!-- living background: the intro footage covers the whole hero, looping, no controls -->
+      <div class="hero-bg" aria-hidden="true">
+        <video class="hero-bg__media" muted loop playsinline preload="metadata"
+          disablepictureinpicture disableremoteplayback controlslist="nodownload nofullscreen noremoteplayback"
+          tabindex="-1"
+          data-src-1080="assets/video/hero-1080.mp4"
+          data-src-1440="assets/video/hero-1440.mp4"
+          data-src-2160="assets/video/hero-2160.mp4"
+          poster="assets/video/hero-poster.jpg"></video>
+        <div class="hero-bg__shade"></div>
+      </div>
+
+      <div class="hero__content">
+        <h1 class="hero__title" aria-label="Matheshwaran A S">
+          <span class="hero__line"><span class="split-chars">MATHESHWARAN A S</span></span>
+        </h1>
+        <div class="hero__bottom">
+          <p class="hero__role">
+            <span class="hero__role-line"><span>Full Stack Developer</span></span>
+            <span class="hero__role-line"><span>&amp; <em class="shimmer">AI Product</em> Engineer</span></span>
+          </p>
+          <div class="hero__scroll reveal-up" data-cursor="hover">
+            <span class="mono">Scroll to explore</span>
+            <span class="hero__scroll-line"><i></i></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about">
+      <div class="section-label"><span class="mono">01</span><span class="mono">About me</span></div>
+
+      <div class="about__grid">
+        <div class="portrait" data-cursor="view" data-cursor-label="Hello!">
+          <div class="portrait__card">
+            <div class="portrait__img-wrap">
+              <img src="assets/mathesh.jpg" alt="Portrait of Matheshwaran A S" class="portrait__img" />
+            </div>
+            <div class="portrait__glare"></div>
+            <div class="portrait__holo"></div>
+            <div class="portrait__tag mono">
+              <span>Matheshwaran A S</span><span>↗ Full Stack Dev</span>
+            </div>
+          </div>
+          <div class="portrait__orbit"><span>✦ React ✦ Node ✦ AI ✦ MongoDB ✦ React ✦ Node ✦ AI ✦ MongoDB </span></div>
+        </div>
+
+        <div class="about__content">
+          <p class="about__big fill-text">
+            I'm Matheshwaran — a full stack developer who builds and ships complete products: secure back-ends,
+            clean data models, AI-powered features and interfaces that feel effortless.
+          </p>
+          <p class="about__small reveal-up">
+            Computer Science Engineering student (2023–2027) at PSNA College of Engineering and Technology with hands-on
+            experience from two remote internships. I work with React.js, Node.js, Express, Django, MongoDB and PostgreSQL,
+            and integrate Google Gemini AI, voice and payments into real products. Seeking SDE internship and entry-level software engineering roles.
+          </p>
+
+          <div class="stats">
+            <div class="stat reveal-up"><strong><span class="count" data-to="5">0</span>+</strong><span class="mono">Live projects</span></div>
+            <div class="stat reveal-up"><strong><span class="count" data-to="2">0</span></strong><span class="mono">Internships</span></div>
+            <div class="stat reveal-up"><strong><span class="count" data-to="8.5" data-dec="1">0</span></strong><span class="mono">CGPA · B.E. CSE</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <section class="marquee-wrap" aria-hidden="true">
+      <div class="marquee marquee--a"><div class="marquee__track">
+        <span>Full Stack Development</span><b>✦</b><span>AI Integration</span><b>✦</b><span>REST APIs</span><b>✦</b><span>System Design</span><b>✦</b>
+        <span>Full Stack Development</span><b>✦</b><span>AI Integration</span><b>✦</b><span>REST APIs</span><b>✦</b><span>System Design</span><b>✦</b>
+      </div></div>
+      <div class="marquee marquee--b"><div class="marquee__track">
+        <span>React</span><b>●</b><span>Node.js</span><b>●</b><span>MongoDB</span><b>●</b><span>Gemini AI</span><b>●</b><span>PostgreSQL</span><b>●</b><span>Three.js</span><b>●</b>
+        <span>React</span><b>●</b><span>Node.js</span><b>●</b><span>MongoDB</span><b>●</b><span>Gemini AI</span><b>●</b><span>PostgreSQL</span><b>●</b><span>Three.js</span><b>●</b>
+      </div></div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="skills" id="skills">
+      <div class="section-label"><span class="mono">02</span><span class="mono">Expertise</span></div>
+      <h2 class="section-title"><span class="split-words">What I bring to the table</span></h2>
+
+      <div class="skills__grid">
+        <div class="sphere" data-cursor="view" data-cursor-label="Spin">
+          <div class="sphere__glow"></div>
+          <div class="sphere__tags"></div>
+        </div>
+
+        <div class="services">
+          <article class="service" data-cursor="hover">
+            <span class="service__num mono">01</span>
+            <div class="service__body">
+              <h3>Full Stack Development</h3>
+              <p>MERN &amp; Django apps with JWT / bcrypt auth, REST APIs, CRUD workflows and clean database design.</p>
+            </div>
+            <span class="service__arrow">↗</span>
+          </article>
+          <article class="service" data-cursor="hover">
+            <span class="service__num mono">02</span>
+            <div class="service__body">
+              <h3>AI Integration</h3>
+              <p>Google Gemini assistants, AI reports and coaching, voice input with the Web Speech API.</p>
+            </div>
+            <span class="service__arrow">↗</span>
+          </article>
+          <article class="service" data-cursor="hover">
+            <span class="service__num mono">03</span>
+            <div class="service__body">
+              <h3>Responsive Front-end</h3>
+              <p>Reusable React.js + Tailwind interfaces with 3D, motion and smooth, accessible UX.</p>
+            </div>
+            <span class="service__arrow">↗</span>
+          </article>
+          <article class="service" data-cursor="hover">
+            <span class="service__num mono">04</span>
+            <div class="service__body">
+              <h3>Production &amp; Payments</h3>
+              <p>Firebase, PostgreSQL, MySQL, Razorpay checkout and Vercel deployments — built to go live.</p>
+            </div>
+            <span class="service__arrow">↗</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK (horizontal) ============ -->
+    <section class="work" id="work">
+      <div class="work__pin"><div class="work__inner">
+        <div class="work__head">
+          <div class="section-label"><span class="mono">03</span><span class="mono">Selected work</span></div>
+          <h2 class="section-title"><span class="split-words">Live projects</span></h2>
+          <p class="work__hint mono">Keep scrolling →</p>
+        </div>
+        <div class="work__track">
+          <a href="https://nutri-ai-lemon.vercel.app" target="_blank" rel="noopener" class="project" data-cursor="view" data-cursor-label="Live ↗" style="--c1:#00e676;--c2:#00c2ff">
+            <div class="project__media">
+              <div class="project__art project__art--shot"><img src="assets/projects/nutritamil.jpg" alt="NutriTamil AI" loading="lazy" /></div>
+              <span class="project__index mono">01 / 05</span>
+            </div>
+            <div class="project__info">
+              <h3>NutriTamil AI</h3>
+              <p>AI nutrition app · React · Firebase · Razorpay</p>
+            </div>
+          </a>
+          <a href="https://habit-tracker-red-rho.vercel.app" target="_blank" rel="noopener" class="project" data-cursor="view" data-cursor-label="Live ↗" style="--c1:#ffb020;--c2:#ff6a00">
+            <div class="project__media">
+              <div class="project__art project__art--shot"><img src="assets/projects/habit.jpg" alt="AuraHabit AI" loading="lazy" /></div>
+              <span class="project__index mono">02 / 05</span>
+            </div>
+            <div class="project__info">
+              <h3>AuraHabit AI</h3>
+              <p>MERN · JWT / bcrypt · Gemini API</p>
+            </div>
+          </a>
+          <a href="https://grocery-shop-red-delta.vercel.app" target="_blank" rel="noopener" class="project" data-cursor="view" data-cursor-label="Live ↗" style="--c1:#8b5cf6;--c2:#10b981">
+            <div class="project__media">
+              <div class="project__art project__art--shot"><img src="assets/projects/freshfarm.jpg" alt="FreshFarm" loading="lazy" /></div>
+              <span class="project__index mono">03 / 05</span>
+            </div>
+            <div class="project__info">
+              <h3>FreshFarm</h3>
+              <p>Grocery e-commerce · React Three Fiber · Razorpay</p>
+            </div>
+          </a>
+          <a href="https://gymapp-two-kohl.vercel.app" target="_blank" rel="noopener" class="project" data-cursor="view" data-cursor-label="Live ↗" style="--c1:#a3e635;--c2:#3f6212">
+            <div class="project__media">
+              <div class="project__art project__art--shot"><img src="assets/projects/oliva.jpg" alt="Oliva" loading="lazy" /></div>
+              <span class="project__index mono">04 / 05</span>
+            </div>
+            <div class="project__info">
+              <h3>Oliva</h3>
+              <p>Gym management SaaS · Role-based portals · React</p>
+            </div>
+          </a>
+          <a href="https://valtrix-seven.vercel.app" target="_blank" rel="noopener" class="project" data-cursor="view" data-cursor-label="Live ↗" style="--c1:#a855f7;--c2:#6366f1">
+            <div class="project__media">
+              <div class="project__art project__art--shot"><img src="assets/projects/valtrix.jpg" alt="Valtrix AI" loading="lazy" /></div>
+              <span class="project__index mono">05 / 05</span>
+            </div>
+            <div class="project__info">
+              <h3>Valtrix AI</h3>
+              <p>AI chatbot · Node.js · MongoDB · Web Speech API</p>
+            </div>
+          </a>
+          <div class="project project--more">
+            <p class="mono">Want to see the code?</p>
+            <a href="https://github.com/MATHESH-yeg" target="_blank" rel="noopener" class="btn-circle magnetic" data-cursor="hover"><span>GitHub ↗</span></a>
+          </div>
+        </div>
+      </div></div>
+    </section>
+
+    <!-- ============ JOURNEY ============ -->
+    <section class="journey" id="journey">
+      <div class="section-label"><span class="mono">04</span><span class="mono">Journey</span></div>
+      <h2 class="section-title"><span class="split-words">The path so far</span></h2>
+
+      <div class="timeline">
+        <div class="timeline__line"><i></i></div>
+        <div class="tl-item">
+          <span class="tl-item__year mono">Mar 2025 — Present</span>
+          <div class="tl-item__card">
+            <h3>Frontend Developer Intern · Upfunda.academy</h3>
+            <p>Building responsive, reusable React.js + Tailwind interfaces for an ed-tech platform, integrating REST APIs with loading and error states, in an Agile team (remote).</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-item__year mono">Jun — Aug 2025</span>
+          <div class="tl-item__card">
+            <h3>Web Development Intern · Corizo</h3>
+            <p>Developed 5+ responsive web interfaces with React.js, Node.js and MongoDB, connecting front-end to back-end through RESTful APIs and CRUD workflows (remote).</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-item__year mono">Internship</span>
+          <div class="tl-item__card">
+            <h3>Full Stack Development Intern · Lemorian Technologies</h3>
+            <p>Offline full stack development internship — end-to-end web application development. Certified.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-item__year mono">Achievements</span>
+          <div class="tl-item__card">
+            <h3>80+ LeetCode · Certifications</h3>
+            <p>80+ DSA problems solved. Workshops in Cybersecurity Fundamentals, Django Architecture and SQL Security &amp; SQL Injection Prevention.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-item__year mono">2023 — 2027</span>
+          <div class="tl-item__card">
+            <h3>B.E. Computer Science · CGPA 8.5</h3>
+            <p>PSNA College of Engineering and Technology, Dindigul. Where curiosity turned into a craft.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="section-label"><span class="mono">05</span><span class="mono">Contact</span></div>
+      <h2 class="contact__title">
+        <span class="contact__line"><span class="split-chars">Let's create</span></span>
+        <span class="contact__line"><span class="split-chars outline">something</span></span>
+        <span class="contact__line"><span class="split-chars gradient-text">unreal.</span></span>
+      </h2>
+
+      <div class="contact__row">
+        <div class="contact__details">
+          <a href="mailto:matheshwaranmathesh432@gmail.com" class="contact__mail" data-cursor="hover">
+            <span class="contact__mail-text">matheshwaranmathesh432<wbr>@gmail.com</span>
+            <span class="contact__mail-line"></span>
+          </a>
+          <p class="contact__meta mono"><a href="tel:+918754056213" data-cursor="hover">+91 87540 56213</a> · Madurai, Tamil Nadu, India</p>
+        </div>
+        <a href="mailto:matheshwaranmathesh432@gmail.com" class="btn-circle btn-circle--big magnetic" data-cursor="hover">
+          <span>Get in touch</span>
+        </a>
+      </div>
+
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/matheshwaran-a-s-290450297" target="_blank" rel="noopener" class="social magnetic" data-cursor="hover"><span data-text="LinkedIn ↗">LinkedIn ↗</span></a>
+        <a href="https://github.com/MATHESH-yeg" target="_blank" rel="noopener" class="social magnetic" data-cursor="hover"><span data-text="GitHub ↗">GitHub ↗</span></a>
+        <a href="mailto:matheshwaranmathesh432@gmail.com" class="social magnetic" data-cursor="hover"><span data-text="Email ↗">Email ↗</span></a>
+        <a href="assets/Matheshwaran-AS-Resume.pdf" download class="social magnetic" data-cursor="hover"><span data-text="Download résumé ↓">Download résumé ↓</span></a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span class="mono">© 2026 Matheshwaran A S. All rights reserved.</span>
+      <span class="mono">Designed &amp; built with obsession.</span>
+      <a href="#top" class="mono footer__top" data-cursor="hover">Back to top ↑</a>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
